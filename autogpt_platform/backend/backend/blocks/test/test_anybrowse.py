@@ -1,6 +1,5 @@
 """Comprehensive tests for AnyBrowse block."""
 
-from typing import cast
 from unittest.mock import AsyncMock, MagicMock, patch
 
 import pytest
