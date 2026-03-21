@@ -126,7 +126,7 @@ class TestAnyBrowseBlock:
         # Verify request was made correctly
         mock_requests.post.assert_called_once()
         call_args = mock_requests.post.call_args
-        assert call_args.kwargs["url"] == "https://anybrowse.dev/scrape"
+        assert call_args.args[0] == "https://anybrowse.dev/scrape"
         assert call_args.kwargs["json"] == {"url": "https://example.com"}
         assert call_args.kwargs["headers"]["x-api-key"] == "test-api-key"
 
@@ -172,7 +172,7 @@ class TestAnyBrowseBlock:
         # Verify request was made without API key header
         mock_requests.post.assert_called_once()
         call_args = mock_requests.post.call_args
-        assert call_args.kwargs["url"] == "https://anybrowse.dev/scrape"
+        assert call_args.args[0] == "https://anybrowse.dev/scrape"
         assert call_args.kwargs["json"] == {"url": "https://example.org"}
         # No x-api-key header when credentials are not provided
         assert "x-api-key" not in call_args.kwargs["headers"]
