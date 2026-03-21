@@ -1,7 +1,5 @@
 from typing import Any
 
-from pydantic import SecretStr
-
 from backend.blocks._base import (
     Block,
     BlockCategory,
@@ -10,14 +8,13 @@ from backend.blocks._base import (
     BlockSchemaOutput,
 )
 from backend.blocks.anybrowse._auth import (
-    TEST_CREDENTIALS,
     TEST_CREDENTIALS_INPUT,
     AnyBrowseCredentials,
     AnyBrowseCredentialsField,
     AnyBrowseCredentialsInput,
 )
 from backend.blocks.helpers.http import GetRequest
-from backend.data.model import APIKeyCredentials, SchemaField
+from backend.data.model import SchemaField
 from backend.util.request import Requests
 
 
