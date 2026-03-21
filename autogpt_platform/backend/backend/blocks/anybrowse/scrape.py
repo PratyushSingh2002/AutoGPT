@@ -32,9 +32,7 @@ class AnyBrowseScrapeBlock(Block, GetRequest):
 
     class Input(BlockSchemaInput):
         credentials: AnyBrowseCredentialsInput = AnyBrowseCredentialsField()
-        url: str = SchemaField(
-            description="The URL to scrape and extract content from"
-        )
+        url: str = SchemaField(description="The URL to scrape and extract content from")
 
     class Output(BlockSchemaOutput):
         markdown: str = SchemaField(
@@ -57,8 +55,15 @@ class AnyBrowseScrapeBlock(Block, GetRequest):
                 "url": "https://example.com",
                 "credentials": TEST_CREDENTIALS_INPUT,
             },
-            test_output=("markdown", "# Example Domain\n\nThis domain is for use in..."),
-            test_mock={"post_request": lambda *args, **kwargs: {"markdown": "# Example Domain\n\nThis domain is for use in..."}},
+            test_output=(
+                "markdown",
+                "# Example Domain\n\nThis domain is for use in...",
+            ),
+            test_mock={
+                "post_request": lambda *args, **kwargs: {
+                    "markdown": "# Example Domain\n\nThis domain is for use in..."
+                }
+            },
         )
 
     async def run(
