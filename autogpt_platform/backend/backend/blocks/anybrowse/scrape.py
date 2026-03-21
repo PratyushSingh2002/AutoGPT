@@ -62,7 +62,11 @@ class AnyBrowseScrapeBlock(Block, GetRequest):
         )
 
     async def run(
-        self, input_data: Input, *, credentials: AnyBrowseCredentials | None = None, **kwargs
+        self,
+        input_data: Input,
+        *,
+        credentials: AnyBrowseCredentials | None = None,
+        **kwargs,
     ) -> BlockOutput:
         url = input_data.url
         headers = {"Content-Type": "application/json"}

@@ -106,7 +106,7 @@ class TestAnyBrowseBlock:
         # Prepare input data
         input_data = AnyBrowseScrapeBlock.Input(
             url="https://example.com",
-            credentials={
+            credentials={  # type: ignore
                 "provider": "anybrowse",
                 "id": "test-creds",
                 "type": "api_key",
@@ -152,7 +152,7 @@ class TestAnyBrowseBlock:
         # Prepare input data without credentials
         input_data = AnyBrowseScrapeBlock.Input(
             url="https://example.org",
-            credentials={
+            credentials={  # type: ignore
                 "provider": "anybrowse",
                 "id": "",
                 "type": "api_key",
@@ -198,7 +198,7 @@ class TestAnyBrowseBlock:
         # Prepare input data
         input_data = AnyBrowseScrapeBlock.Input(
             url="https://example.com",
-            credentials={
+            credentials={  # type: ignore
                 "provider": "anybrowse",
                 "id": "test-creds",
                 "type": "api_key",
@@ -242,7 +242,7 @@ class TestAnyBrowseBlock:
         # Prepare input data
         input_data = AnyBrowseScrapeBlock.Input(
             url="https://example.com",
-            credentials={
+            credentials={  # type: ignore
                 "provider": "anybrowse",
                 "id": "test-creds",
                 "type": "api_key",
@@ -290,7 +290,7 @@ class TestAnyBrowseBlock:
 
             input_data = AnyBrowseScrapeBlock.Input(
                 url=url,
-                credentials={
+                credentials={  # type: ignore
                     "provider": "anybrowse",
                     "id": "test-creds",
                     "type": "api_key",
