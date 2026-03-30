@@ -20,6 +20,7 @@
 * [Airtable Records](block-integrations/airtable/records.md)
 * [Airtable Schema](block-integrations/airtable/schema.md)
 * [Airtable Triggers](block-integrations/airtable/triggers.md)
+* [Anybrowse Scrape](block-integrations/anybrowse/scrape.md)
 * [Apollo Organization](block-integrations/apollo/organization.md)
 * [Apollo People](block-integrations/apollo/people.md)
 * [Apollo Person](block-integrations/apollo/person.md)
